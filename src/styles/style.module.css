@@ -1,0 +1,49 @@
+.section2 {
+  display: flex;
+  justify-content: center;
+  background-image: url("../../public/assets/images/background.png");
+  height: 780px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.panel {
+  position: relative;
+  background-image: url("../../public/assets/images/panel.png");
+  background-size: 100% 100%;
+  height: 77%;
+  width: 95%;
+  padding: 30px;
+  top: 150px;
+}
+
+.tabmenu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tabmenu img {
+  width: 225px;
+  height: 70px;
+}
+
+.tabBtn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../public/assets/images/tabbtn.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 150px;
+  height: 50px;
+  color: white;
+  bottom: 0;
+}
+
+.tabPanel {
+  padding: 10px;
+  width: 100%;
+  height: 90%;
+}

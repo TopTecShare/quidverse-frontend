@@ -1,0 +1,23 @@
+.btnLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../public/assets/images/btn.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 250px;
+  height: 65px;
+}
+
+.menuItem {
+  color: darkgoldenrod !important;
+}
+
+.menuItem:hover {
+  color: cornsilk !important;
+  transition: ease-in-out 0.5s;
+  -webkit-transition: ease-in-out 0.5s;
+  -moz-transition: ease-in-out 0.5s;
+  -ms-transition: ease-in-out 0.5s;
+  -o-transition: ease-in-out 0.5s;
+}

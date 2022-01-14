@@ -1,0 +1,27 @@
+.footer {
+  background-image: url("../../../public/assets/images/footer.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 195px;
+  border-top: 3px solid darkgoldenrod;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.iconGroup {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.iconSize {
+  width: 30px;
+  height: 30px;
+  margin: 0 20px;
+}
