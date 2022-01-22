@@ -1,6 +1,13 @@
-@font-face {
+/* @font-face {
   font-family: "Rammetto";
   src: url("../../public/assets/font/RammettoOne-Regular.ttf")
+    format("truetype");
+  font-display: swap;
+  font-style: normal;
+} */
+@font-face {
+  font-family: "Rammetto";
+  src: url("../../public/assets/font/Uni Sans Heavy Italic.otf")
     format("truetype");
   font-display: swap;
   font-style: normal;
@@ -9,7 +16,7 @@
 .section2 {
   display: flex;
   justify-content: center;
-  background-image: url("../../public/assets/images/background.png");
+  /* background-image: url("../../public/assets/images/background.png"); */
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,7 +71,7 @@
   height: 65px;
 }
 .backDiv {
-  background-image: url("../../public/assets/images/background.svg");
+  /* background-image: url("../../public/assets/images/background.svg"); */
 }
 .tabmenu img {
   width: 225px;
@@ -191,7 +198,8 @@
     transform 0.6s cubic-bezier(0.5, 0, 0, 1) 0s;
 }
 .showItemDiv {
-  background-image: url("../../public/assets/images/frame2.png");
+  /* background-image: url("../../public/assets/images/frame2.png"); */
+  background-color: black;
   background-size: 100% 100%;
   height: 152px;
   width: 100%;
@@ -242,14 +250,19 @@
 }
 
 .mintCount {
-  background-image: url("../../public/assets/images/frame2.png");
+  /* background-image: url("../../public/assets/images/frame2.png"); */
+  background-color: black;
   background-size: 100% 100%;
   height: 100px;
   width: 300px;
-  padding: 35px;
-  margin: 0 auto;
+  padding: 15px;
+  margin: 30px auto;
   color: white;
   font-family: "Rammetto";
+  font-size: 26px;
+  text-align: center;
+  border-radius: 5px;
+  /* box-shadow: 10px 10px 0px #dc4530, 20px 20px 0px #fdc52d; */
 }
 
 .buy {

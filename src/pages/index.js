@@ -35,11 +35,11 @@ function Home() {
   return (
     <DAppProvider>
       <Head>
-        <title>Pudge Penguins</title>
+        <title>Live Date</title>
       </Head>
       <div
         style={{
-          backgroundColor: "#07081d",
+          backgroundColor: "#000014",
           fontFamily: "Lorem Ipsum!important",
         }}
       >
@@ -164,9 +164,11 @@ function Home() {
                           marginBottom: "0",
                         }}
                       >
-                        TENTACLE
+                        UNLOCK THE QUIDVERSE
                       </p>
-                      <p className={styles.knockouts}>KNOCKOUTS</p>
+                      <p className={styles.knockouts}>
+                        TKO: TENTACLE KNOCKOUT V1
+                      </p>
                     </div>
                     <p
                       style={{
@@ -195,29 +197,6 @@ function Home() {
                 </Row>
               </div>
               <div>
-                <Row style={{ paddingTop: 48, margin: "0 auto" }}>
-                  <Col md={4}>
-                    <div className={styles.showItemDiv}>
-                      <p className={styles.showItemP}>Title</p>
-                      {/* <MintBtn txt="MINT 1" amount="1" /> */}
-                      <div className={styles.showItemInfo}>TKOs v1</div>
-                    </div>
-                  </Col>
-                  <Col md={4}>
-                    <div className={styles.showItemDiv}>
-                      <p className={styles.showItemP}>Items</p>
-                      {/* <MintBtn txt="MINT 1" amount="1" /> */}
-                      <div className={styles.showItemInfo}>0 / 1000</div>
-                    </div>
-                  </Col>
-                  <Col md={4}>
-                    <div className={styles.showItemDiv}>
-                      <p className={styles.showItemP}>Price</p>
-                      {/* <MintBtn txt="MINT 1" amount="1" /> */}
-                      <div className={styles.showItemInfo}>0.25 ETH</div>
-                    </div>
-                  </Col>
-                </Row>
                 <div style={{ textAlign: "center", marginTop: "30px" }}>
                   <MintButton />
                   <p

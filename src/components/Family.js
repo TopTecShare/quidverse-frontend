@@ -31,7 +31,7 @@ function Family() {
         </p>
 
         <div className={styles.border}>
-          <p>
+          <p style={{ fontSize: "20px" }}>
             Three prizes will depend on what you mint. The more you mint the
             higher your chance will be to get those prestige prizes. Those are
             ultra rare because they only appear once in the entire collection
@@ -43,52 +43,52 @@ function Family() {
       </div>
       <div className={styles.family}>
         <Row className={styles.team_members}>
-          <Col>
+          <Col sm={12}>
             <img
               src="assets/images/ape1.png"
               className={styles.team_member_pic}
             />
           </Col>
-          <Col>
+          <Col sm={12}>
             <p style={{ color: "white", fontSize: "24px" }}>
               Rolex Tentacle Prop: get a $40,000 customized Rolex
             </p>
           </Col>
         </Row>
         <Row className={styles.team_members}>
-          <Col>
+          <Col sm={12}>
             <img
               src="assets/images/ape2.png"
               className={styles.team_member_pic}
             />
           </Col>
-          <Col>
+          <Col sm={12}>
             <p style={{ color: "white", fontSize: "24px" }}>
               Ali vs Liston OG Scene: get signed Muhammad Ali gloves
             </p>
           </Col>
         </Row>
         <Row className={styles.team_members}>
-          <Col>
+          <Col sm={12}>
             <img
               src="assets/images/ape3.png"
               className={styles.team_member_pic}
             />
           </Col>
-          <Col>
+          <Col sm={12}>
             <p style={{ color: "white", fontSize: "24px" }}>
               Beach Background: get a family vacation worth $10,500
             </p>
           </Col>
         </Row>
         <Row className={styles.team_members}>
-          <Col>
+          <Col sm={12}>
             <img
               src="assets/images/ape4.png"
               className={styles.team_member_pic}
             />
           </Col>
-          <Col>
+          <Col sm={12}>
             <p style={{ color: "white", fontSize: "24px" }}>
               5 random NFTs: get $1,000 each straight to your wallet
             </p>

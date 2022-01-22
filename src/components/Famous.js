@@ -90,7 +90,7 @@ const Famous = () => {
           </Col>
         </Row>
       </div> */}
-      <div className={styles.buy}>
+      {/* <div className={styles.buy}>
         <Row
           style={{
             display: "flex",
@@ -137,7 +137,7 @@ const Famous = () => {
             </button>
           </Col>
         </Row>
-      </div>
+      </div> */}
     </div>
   )
 }

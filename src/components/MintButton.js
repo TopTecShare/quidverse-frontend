@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Web3 from "web3"
 import contractAbi from "../abi/contractABI.json"
+import { Row, Col, Container } from "reactstrap"
 
 import styles from "../styles/style.module.css"
 // import Modal from "@material-ui/core/Modal"
@@ -11,10 +12,38 @@ import styles from "../styles/style.module.css"
 
 function MintButton() {
   const [count, setCount] = useState(1)
+  const [mintCount, setMintCount] = useState(0)
+
   useEffect(() => {
+    const web3 = window.ethereum ? new Web3(window.ethereum) : null
+    const contractAddress = "0x80A9603221408714ccb2d407d2850b4aF94494ec"
+    const contract = new web3.eth.Contract(contractAbi, contractAddress)
     window.ethereum.on("chainChanged", (chainId) => {
-      alert(chainId)
+      // alert(chainId)
+      if (Number(chainId) !== 1) {
+        alert("Please switch to Ethereum mainnet in your wallet")
+      } else window.location.reload()
     })
+    if (!!contract) {
+      contract.methods
+        .totalSupply()
+        .call()
+        .then((res) => {
+          setMintCount(res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+
+      contract.events
+        .CreateTKO()
+        .on("data", (event) => {
+          setMintCount(Number(mintCount) + 1)
+        })
+        .on("error", (error) => {
+          console.log(error)
+        })
+    }
   }, [])
   const mintToken = async () => {
     const web3 = window.ethereum ? new Web3(window.ethereum) : null
@@ -32,12 +61,36 @@ function MintButton() {
       // setText(
       //   "Successfully Minted. Please visit https://opensea.io/collection/wulfz-official"
       // );
+      alert("ya")
     } catch (error) {
       console.log(error)
     }
   }
   return (
     <div>
+      <Row style={{ paddingTop: 48, margin: "0 auto" }}>
+        <Col md={4}>
+          <div className={styles.showItemDiv}>
+            <p className={styles.showItemP}>Title</p>
+            {/* <MintBtn txt="MINT 1" amount="1" /> */}
+            <div className={styles.showItemInfo}>TKOs v1</div>
+          </div>
+        </Col>
+        <Col md={4}>
+          <div className={styles.showItemDiv}>
+            <p className={styles.showItemP}>Items</p>
+            {/* <MintBtn txt="MINT 1" amount="1" /> */}
+            <div className={styles.showItemInfo}>{mintCount} / 1000</div>
+          </div>
+        </Col>
+        <Col md={4}>
+          <div className={styles.showItemDiv}>
+            <p className={styles.showItemP}>Price</p>
+            {/* <MintBtn txt="MINT 1" amount="1" /> */}
+            <div className={styles.showItemInfo}>0.25 ETH</div>
+          </div>
+        </Col>
+      </Row>
       <div className={styles.mintCount}>
         <span>Quantity: </span>
         <input
@@ -66,13 +119,25 @@ function MintButton() {
       <button
         onClick={() => mintToken()}
         style={{
-          backgroundColor: "transparent",
+          backgroundColor: "yellow",
           border: 0,
           cursor: "pointer",
           marginLeft: "20px",
+          marginTop: "30px",
+          padding: "0 20px",
+          borderRadius: "10px",
         }}
       >
-        <img src="/assets/images/mintbutton.png" />
+        <p
+          style={{
+            fontFamily: "Rammetto",
+            color: "red",
+            fontSize: "40px",
+            marginTop: "20px",
+          }}
+        >
+          MINT YOUR TKO
+        </p>
       </button>
     </div>
   )
