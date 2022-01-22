@@ -6,42 +6,53 @@ const Famous = () => {
     <div className={styles.famous}>
       <Row>
         <Col xs lg="7" className={styles.border}>
-          <p style={{ fontFamily: "Rammetto", fontSize: "32px" }}>
-            WELCOME TO THE BORED APE YACHT CLUB
+          <p
+            style={{
+              fontFamily: "Rammetto",
+              fontSize: "32px",
+              color: "#3bb9ff",
+            }}
+          >
+            WELCOME TO THE QUIDVERSE: MINT TO UNLOCK
           </p>
           <p>
-            BAYC is a collection of 10000 Bored Ape NFTs-unique digital
-            collectibles living on the Ethereum blockchain. Your Bored Ape
-            doubles as your Yacht Club membership card, and grants access to
-            members-only benefits, the first of which is access to THE BATHROOM,
-            a collaborative graffiti board. Future areas and perks can be
-            unlocked by the community through roadmap activation.
+            The Quidverse is the first and only underwater metaverse populated
+            by the fastest growing creature in the ocean-- the squid. In the
+            Squid Metaverse (Quidverse) you can make real money in a virtual
+            world, socially connect, find real world jobs (by connecting), play
+            P2E arcade games, and more. The TKO NFT collection is your key to
+            the metaverse.
           </p>
         </Col>
         <Col xs lg="5" className={styles.border}>
-          <Col>
+          <div className={styles.penguinImgTag}>
+            <div className={styles.penguinImg}>
+              <img src="/assets/images/1.gif" className={styles.imgWidth} />
+            </div>
+          </div>
+          {/* <Col>
             <img
-              src="/assets/images/mon1.png"
+              src="/assets/images/ape1.png"
               className={styles.monkey_width}
             />
             <img
-              src="/assets/images/mon2.png"
-              className={styles.monkey_width}
-            />
-          </Col>
-          <Col>
-            <img
-              src="/assets/images/mon3.png"
-              className={styles.monkey_width}
-            />
-            <img
-              src="/assets/images/mon4.png"
+              src="/assets/images/ape2.png"
               className={styles.monkey_width}
             />
           </Col>
+          <Col>
+            <img
+              src="/assets/images/ape3.png"
+              className={styles.monkey_width}
+            />
+            <img
+              src="/assets/images/ape4.png"
+              className={styles.monkey_width}
+            />
+          </Col> */}
         </Col>
       </Row>
-      <div>
+      {/* <div>
         <p
           className={styles.fair}
           style={{
@@ -51,20 +62,23 @@ const Famous = () => {
             marginBottom: "0",
           }}
         >
-          FAIR DISTRIBUTION
+          RANDOM PRIZES FOR TKO MINTERS
         </p>
         <p
           className={styles.fair}
           style={{ fontSize: "24px", fontStyle: "italic" }}
         >
-          (BONDING CURVES ARE A PONZI)
+          (Get rewarded for being a pioneer)
         </p>
         <Row>
           <Col xs lg="7" className={styles.border}>
             <p>
-              There are no bonding curves here. Buying a Bored Ape costs
-              0.08ETH. There are no price tiers; BAYC membership costs the same
-              for everyone.
+              Three prizes will depend on what you mint. The more you mint the
+              higher your chance will be to get those prestige prizes. Those are
+              ultra rare because they only appear once in the entire collection
+              (i.e. the Rolex attribute). Five cash prizes for a random NFT--
+              you can win more than one cash prize. The more you mint the more
+              you can win.
             </p>
           </Col>
           <Col xs lg="5" className={styles.border}>
@@ -75,7 +89,7 @@ const Famous = () => {
             </p>
           </Col>
         </Row>
-      </div>
+      </div> */}
       <div className={styles.buy}>
         <Row
           style={{
@@ -123,20 +137,6 @@ const Famous = () => {
             </button>
           </Col>
         </Row>
-      </div>
-      <div>
-        <p>LIL PUDGYS</p>
-        <p>
-          What comes after 8888 Pudgy Penguins? 22222 Lil Pudgys.
-          <br />
-          Each Lil Pudgy is a unique collectible NFT randomly generated from 400
-          traits.
-          <br />
-          Every Pudgy Penguin is eligible to claim a Lil Pudgy on December 19th
-          and all of the other Lil Pudgys are waiting to be minted by anybody
-          and everybody who wants to join The Huddle!
-        </p>
-        {/* <img src="assets/images/opening.gif" /> */}
       </div>
     </div>
   )

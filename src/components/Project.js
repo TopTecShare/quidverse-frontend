@@ -1,23 +1,26 @@
+import styles from "../styles/style.module.css"
 import { StylesContext } from "@material-ui/styles"
-import { Col } from "reactstrap"
-import SecondItem from "./SecondItem"
+import { Row, Col } from "reactstrap"
+import FirstItem from "./FirstItem"
 
 function Project() {
   return (
     <div>
-      <div>
-        <img src="assets/images/opening.gif" />
+      <div style={{ display: "flex" }}>
+        <img src="assets/images/sublogo.png" />
         <div>
-          <p>WHAT ABOUT</p>
-          <p>THE PROJECT</p>
+          <p className={styles.subtitle1}>WHAT ABOUT</p>
+          <p className={styles.subtitle2}>THE PROJECT</p>
         </div>
+      </div>
+      <div>
         <Row className={styles.projectDetail}>
           <Col className={styles.carousel}>
-            {/* <FirstItem />
-            <SecondItem /> */}
+            <FirstItem />
+            {/* <SecondItem /> */}
           </Col>
           <Col>
-            <p>
+            <p style={{ color: "white", fontSize: "20px" }}>
               Pudgy Penguins launched on July 22, 2021. Each penguin is unique
               and no two are exactly alike.
               <br />
@@ -38,3 +41,5 @@ function Project() {
     </div>
   )
 }
+
+export default Project

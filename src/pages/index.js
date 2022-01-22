@@ -1,9 +1,9 @@
 import emailjs from "emailjs-com"
 
 // Components
-import Header from "../components/Header/Header"
 import Famous from "../components/Famous"
-import Footer from "../components/Footer/Footer"
+import Family from "../components/Family"
+import Project from "../components/Project"
 import MintButton from "../components/MintButton"
 import { Row, Col, Container } from "reactstrap"
 
@@ -133,7 +133,10 @@ function Home() {
                 <ConnectBtn />
               </div>
             </header>
-            <img src="/assets/images/main-img.png" className={styles.backimg} />
+            <img
+              src="/assets/images/TKO_COVER.jpeg"
+              className={styles.backimg}
+            />
             <Famous />
 
             <div>
@@ -142,7 +145,7 @@ function Home() {
                   style={{ paddingTop: 5 }}
                   className={styles.penguinContent}
                 >
-                  <Col>
+                  {/* <Col>
                     <div className={styles.penguinImgTag}>
                       <div className={styles.penguinImg}>
                         <img
@@ -151,7 +154,7 @@ function Home() {
                         />
                       </div>
                     </div>
-                  </Col>
+                  </Col> */}
                   <Col>
                     <div>
                       <p
@@ -204,7 +207,7 @@ function Home() {
                     <div className={styles.showItemDiv}>
                       <p className={styles.showItemP}>Items</p>
                       {/* <MintBtn txt="MINT 1" amount="1" /> */}
-                      <div className={styles.showItemInfo}>1000</div>
+                      <div className={styles.showItemInfo}>0 / 1000</div>
                     </div>
                   </Col>
                   <Col md={4}>
@@ -214,29 +217,6 @@ function Home() {
                       <div className={styles.showItemInfo}>0.25 ETH</div>
                     </div>
                   </Col>
-                  {/* <Col md={3}>
-                      <div className={styles.showItemDiv}>
-                        <p className={styles.showItemP}>Owners</p>
-                        <div className={styles.showItemInfo}>4,496</div>
-                      </div>
-                    </Col>
-                    <Col md={3}>
-                      <div className={styles.showItemDiv}>
-                        <p className={styles.showItemP}>Floor</p>
-                        <div className={styles.showItemInfo}>
-                          1.34 <label style={{ fontSize: "20px" }}> ETH</label>
-                        </div>
-                      </div>
-                    </Col>
-                    <Col md={3}>
-                      <div className={styles.showItemDiv}>
-                        <p className={styles.showItemP}>Volume traded</p>
-                        <div className={styles.showItemInfo}>
-                          46,670{" "}
-                          <label style={{ fontSize: "20px" }}> ETH</label>
-                        </div>
-                      </div>
-                    </Col> */}
                 </Row>
                 <div style={{ textAlign: "center", marginTop: "30px" }}>
                   <MintButton />
@@ -254,11 +234,40 @@ function Home() {
                 </div>
               </div>
             </div>
+            <div style={{ textAlign: "center" }}>
+              {/* <div className={styles.opening}>
+                <p
+                  style={{
+                    fontFamily: "Rammetto",
+                    fontSize: "42px",
+                    color: "#3bb9ff",
+                  }}
+                >
+                  LIL PUDGYS
+                </p>
+                <p
+                  style={{
+                    fontSize: "20px",
+                    color: "white",
+                  }}
+                >
+                  What comes after 8888 Pudgy Penguins? 22222 Lil Pudgys.
+                  <br />
+                  Each Lil Pudgy is a unique collectible NFT randomly generated
+                  from 400 traits.
+                  <br />
+                  Every Pudgy Penguin is eligible to claim a Lil Pudgy on
+                  December 19th and all of the other Lil Pudgys are waiting to
+                  be minted by anybody and everybody who wants to join The
+                  Huddle!
+                </p>
+              </div> */}
+              {/* <img src="assets/images/ice_open.png" /> */}
+            </div>
+
+            {/* <Project /> */}
+            <Family />
           </Container>
-          {/* <img src="/assets/images/cut/1.png"></img>
-          <img src="/assets/images/cut/2.png"></img>
-          <img src="/assets/images/cut/3.png"></img>
-          <img src="/assets/images/cut/4.png"></img> */}
         </div>
       </div>
     </DAppProvider>

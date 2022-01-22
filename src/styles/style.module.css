@@ -179,7 +179,7 @@
   border-radius: 5px;
 }
 .penguinImg {
-  margin-top: 30px;
+  margin: 10px 10px 30px 10px;
 }
 .penguinImgTag {
   visibility: visible;
@@ -260,6 +260,37 @@
   /* justify-content: center; */
 }
 
+.opening {
+  width: 500px;
+  margin: 50px auto;
+}
+
+.subtitle2 {
+  color: #3bb9ff;
+  font-family: "Rammetto";
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+.subtitle1 {
+  color: #6f94a1;
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.family {
+  display: flex;
+}
+
+.team_members {
+  width: 50%;
+  padding: 10px;
+}
+
+.team_member_pic {
+  width: 300px;
+}
+
 @media (max-width: 1400px) {
   .penguinImg {
     margin-top: 40px;
@@ -271,6 +302,9 @@
 
   .monkey_width {
     width: 170px;
+  }
+  .family {
+    flex-wrap: wrap;
   }
 }
 
@@ -426,5 +460,9 @@
   .monkey_width {
     width: 250px;
     padding: 10px;
+  }
+
+  .family {
+    display: block;
   }
 }

@@ -18,7 +18,7 @@ function MintButton() {
   }, [])
   const mintToken = async () => {
     const web3 = window.ethereum ? new Web3(window.ethereum) : null
-    const contractAddress = "0x215fC765c38d0a5fBAC83d36B20E2aa444D504C8"
+    const contractAddress = "0x80A9603221408714ccb2d407d2850b4aF94494ec"
     const contract = new web3.eth.Contract(contractAbi, contractAddress)
     const _account = await web3.eth.getAccounts()
 
@@ -39,7 +39,7 @@ function MintButton() {
   return (
     <div>
       <div className={styles.mintCount}>
-        <span>Count: </span>
+        <span>Quantity: </span>
         <input
           type="number"
           min="1"
@@ -52,6 +52,16 @@ function MintButton() {
           value={count}
           onChange={(e) => setCount(e.target.value)}
         />
+        <p
+          style={{
+            color: "white",
+            fontSize: "12px",
+            textAlign: "center",
+            fontFamily: "times new roman",
+          }}
+        >
+          Max 20 NFTs per transaction
+        </p>
       </div>
       <button
         onClick={() => mintToken()}
