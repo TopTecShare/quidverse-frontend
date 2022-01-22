@@ -1,34 +1,54 @@
-import emailjs from "emailjs-com"
+import emailjs from "emailjs-com";
+
+import Web3 from "web3";
 
 // Components
-import Famous from "../components/Famous"
-import Family from "../components/Family"
-import Project from "../components/Project"
-import MintButton from "../components/MintButton"
-import { Row, Col, Container } from "reactstrap"
+import Famous from "../components/Famous";
+import Family from "../components/Family";
+import Project from "../components/Project";
+import MintButton from "../components/MintButton";
+import { Row, Col, Container } from "reactstrap";
 
-import Head from "next/head"
-import styles from "../styles/style.module.css"
-import "bootstrap/dist/css/bootstrap.css"
-import { DAppProvider } from "@usedapp/core"
-import { useEthers } from "@usedapp/core"
-import Link from "next/link"
+import Head from "next/head";
+import styles from "../styles/style.module.css";
+import "bootstrap/dist/css/bootstrap.css";
+import { DAppProvider } from "@usedapp/core";
+import { useEthers } from "@usedapp/core";
+import Link from "next/link";
 
 // const mark = "/assets/images/mark.mp4";
 // const logo = "/assets/images/logo.png";
 
 function ConnectBtn(props) {
-  const { activateBrowserWallet, account } = useEthers()
+  const { activateBrowserWallet, account } = useEthers();
 
   const handleWallet = () => {
-    activateBrowserWallet()
-  }
+    activateBrowserWallet();
+
+    const web3 = window.ethereum ? new Web3(window.ethereum) : null;
+
+    if (!web3) {
+      alert("non-ethereum browser detected! please install wallet!");
+    } else {
+      web3.eth
+        .getChainId()
+        .then((e) => {
+          console.log("aaaaaaaaaaaaaaaaaaa", e);
+          if (Number(e) !== 1) {
+            alert("Please switch to Ethereum mainnet in your wallet");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  };
 
   return (
     <button className={styles.btnConnect} onClick={handleWallet}>
       {account ? `${account.slice(0, 6)}...${account.slice(-6)}` : "Connect"}
     </button>
-  )
+  );
 }
 
 function Home() {
@@ -250,7 +270,7 @@ function Home() {
         </div>
       </div>
     </DAppProvider>
-  )
+  );
 }
 
-export default Home
+export default Home;
