@@ -5,9 +5,16 @@
   font-display: swap;
   font-style: normal;
 } */
-@font-face {
+/* @font-face {
   font-family: "Rammetto";
   src: url("../../public/assets/font/Uni Sans Heavy Italic.otf")
+    format("truetype");
+  font-display: swap;
+  font-style: normal;
+} */
+@font-face {
+  font-family: "Rammetto";
+  src: url("../../public/assets/font/Montserrat-Italic-VariableFont_wght.ttf")
     format("truetype");
   font-display: swap;
   font-style: normal;
@@ -16,7 +23,6 @@
 .section2 {
   display: flex;
   justify-content: center;
-  /* background-image: url("../../public/assets/images/background.png"); */
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,52 +65,10 @@
   padding-bottom: 1.5%;
   padding: 1.5%;
 }
-.btnLogin {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../../public/assets/images/tabbtn.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  color: white;
-  width: 250px;
-  height: 65px;
-}
-.backDiv {
-  /* background-image: url("../../public/assets/images/background.svg"); */
-}
+
 .tabmenu img {
   width: 225px;
   height: 70px;
-}
-
-.tabBtn {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../../public/assets/images/tabbtn.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 150px;
-  height: 50px;
-  color: white;
-  bottom: 0;
-  margin-top: 8%;
-}
-
-.tabBtn1 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../../public/assets/images/btn.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 244px;
-  height: 63px;
-  color: white;
-  bottom: 10px;
 }
 
 .tabPanel {
@@ -222,11 +186,17 @@
   margin-left: 64px;
 }
 
+.unlock {
+  color: #79a3b0;
+  font-size: 36px;
+  margin-bottom: 0;
+}
+
 .knockouts {
   color: #3bb9ff;
   font-size: 60px;
   font-family: Rammetto;
-  margin-bottom: 0;
+  margin-bottom: 0px;
   margin-top: -20px;
 }
 
@@ -299,6 +269,7 @@
 .team_members {
   width: 50%;
   padding: 10px;
+  color: white;
 }
 
 .team_member_pic {
@@ -307,7 +278,11 @@
 
 @media (max-width: 1400px) {
   .penguinImg {
-    margin-top: 40px;
+    margin: 40px 0 0 0;
+  }
+
+  .penguinImgTag {
+    margin-left: 0px;
   }
 
   .backimg {
@@ -319,6 +294,7 @@
   }
   .family {
     flex-wrap: wrap;
+    text-align: center;
   }
 }
 
@@ -440,7 +416,6 @@
 
   .imgWidth {
     width: 200px;
-    margin-left: 30px;
   }
 
   .showItemP {
@@ -455,8 +430,13 @@
     font-size: 30px;
   }
 
+  .unlock {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
   .knockouts {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .showItemP {

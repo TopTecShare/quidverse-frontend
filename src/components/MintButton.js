@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Web3 from "web3";
-import contractAbi from "../abi/contractABI.json";
-import { Row, Col, Container } from "reactstrap";
+import React, { useEffect, useState } from "react"
+import Web3 from "web3"
+import contractAbi from "../abi/contractABI.json"
+import { Row, Col, Container } from "reactstrap"
 
-import styles from "../styles/style.module.css";
+import styles from "../styles/style.module.css"
 // import Modal from "@material-ui/core/Modal"
 // import Backdrop from "@material-ui/core/Backdrop"
 // import Fade from "@material-ui/core/Fade"
@@ -11,97 +11,83 @@ import styles from "../styles/style.module.css";
 // import { StylesContext } from "@material-ui/styles"
 
 function MintButton() {
-  const [count, setCount] = useState(1);
-  const [mintCount, setMintCount] = useState(0);
+  const [count, setCount] = useState(1)
+  const [mintCount, setMintCount] = useState(0)
 
   useEffect(() => {
-    const web3 = window.ethereum ? new Web3(window.ethereum) : null;
+    const web3 = window.ethereum ? new Web3(window.ethereum) : null
     if (!web3) {
-      alert("non-ethereum browser detected! please install wallet!");
+      alert("non-ethereum browser detected! please install wallet!")
     } else {
-      const contractAddress = "0x80A9603221408714ccb2d407d2850b4aF94494ec";
-      const contract = new web3.eth.Contract(contractAbi, contractAddress);
-
-      // web3.eth.getChainId().then((e) => {
-      //   console.log("aaaaaaaaaaaaaaaaaaa", e);
-      //   if (Number(e) !== 1) {
-      //     alert("Please switch to Ethereum mainnet in your wallet");
-      //   }
-      // });
+      const contractAddress = "0x82994dff990b80EE01A90A9C2f5aFccc1f5E32F5"
+      const contract = new web3.eth.Contract(contractAbi, contractAddress)
 
       window.ethereum.on("chainChanged", (chainId) => {
         if (Number(chainId) !== 1) {
-          alert("Please switch to Ethereum mainnet in your wallet");
-        } else window.location.reload();
-      });
+          alert("Please switch to Ethereum mainnet in your wallet")
+        } else window.location.reload()
+      })
 
       if (!!contract) {
         contract.methods
           .totalSupply()
           .call()
           .then((res) => {
-            setMintCount(res);
+            setMintCount(res)
           })
           .catch((err) => {
-            console.log(err);
-          });
+            console.log(err)
+          })
 
         contract.events
-          .CreateTKO()
+          .CreateTentacleKnockout()
           .on("data", (event) => {
-            setMintCount(Number(mintCount) + 1);
+            setMintCount(Number(mintCount) + 1)
           })
           .on("error", (error) => {
-            console.log(error);
-          });
+            console.log(error)
+          })
       }
     }
-  }, []);
+  }, [])
   const mintToken = async () => {
-    const web3 = window.ethereum ? new Web3(window.ethereum) : null;
+    const web3 = window.ethereum ? new Web3(window.ethereum) : null
     if (!web3) {
-      alert("non-ethereum browser detected! please install wallet!");
+      alert("non-ethereum browser detected! please install wallet!")
     } else {
-      const contractAddress = "0x80A9603221408714ccb2d407d2850b4aF94494ec";
-      const contract = new web3.eth.Contract(contractAbi, contractAddress);
-      const _account = await web3.eth.getAccounts();
-
-      const price = 250000000000000000; // 0.08 eth
+      const contractAddress = "0x82994dff990b80EE01A90A9C2f5aFccc1f5E32F5"
+      const contract = new web3.eth.Contract(contractAbi, contractAddress)
+      const _account = await web3.eth.getAccounts()
+      const price = 250000000000000000 // 0.08 eth
 
       try {
         await contract.methods.mint(count).send({
           from: _account[0],
           value: price * count,
-        });
-        // setText(
-        //   "Successfully Minted. Please visit https://opensea.io/collection/wulfz-official"
-        // );
+        })
       } catch (error) {
-        console.log(error);
+        console.log(error)
       }
     }
-  };
+  }
   return (
     <div>
       <Row style={{ paddingTop: 48, margin: "0 auto" }}>
         <Col md={4}>
           <div className={styles.showItemDiv}>
             <p className={styles.showItemP}>Title</p>
-            {/* <MintBtn txt="MINT 1" amount="1" /> */}
             <div className={styles.showItemInfo}>TKOs v1</div>
           </div>
         </Col>
         <Col md={4}>
           <div className={styles.showItemDiv}>
             <p className={styles.showItemP}>Items</p>
-            {/* <MintBtn txt="MINT 1" amount="1" /> */}
             <div className={styles.showItemInfo}>{mintCount} / 1000</div>
           </div>
         </Col>
         <Col md={4}>
           <div className={styles.showItemDiv}>
             <p className={styles.showItemP}>Price</p>
-            {/* <MintBtn txt="MINT 1" amount="1" /> */}
             <div className={styles.showItemInfo}>0.25 ETH</div>
           </div>
         </Col>
@@ -155,7 +141,7 @@ function MintButton() {
         </p>
       </button>
     </div>
-  );
+  )
 }
 
-export default MintButton;
+export default MintButton

@@ -1,7 +1,5 @@
 import styles from "../styles/style.module.css"
-import { StylesContext } from "@material-ui/styles"
 import { Row, Col } from "reactstrap"
-import FirstItem from "./FirstItem"
 
 function Project() {
   return (

@@ -27,7 +27,7 @@ const Famous = () => {
         <Col xs lg="5" className={styles.border}>
           <div className={styles.penguinImgTag}>
             <div className={styles.penguinImg}>
-              <img src="/assets/images/1.gif" className={styles.imgWidth} />
+              <img src="/assets/images/2.gif" className={styles.imgWidth} />
             </div>
           </div>
           {/* <Col>

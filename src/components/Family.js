@@ -50,8 +50,9 @@ function Family() {
             />
           </Col>
           <Col sm={12}>
-            <p style={{ color: "white", fontSize: "24px" }}>
-              Rolex Tentacle Prop: get a $40,000 customized Rolex
+            <p style={{ divor: "white", fontSize: "24px" }}>
+              Rolex Tentacle Prop: <br />
+              get a $40,000 customized Rolex
             </p>
           </Col>
         </Row>
@@ -63,8 +64,9 @@ function Family() {
             />
           </Col>
           <Col sm={12}>
-            <p style={{ color: "white", fontSize: "24px" }}>
-              Ali vs Liston OG Scene: get signed Muhammad Ali gloves
+            <p style={{ divor: "white", fontSize: "24px" }}>
+              Ali vs Liston OG Scene: <br />
+              get signed Muhammad Ali gloves
             </p>
           </Col>
         </Row>
@@ -76,8 +78,9 @@ function Family() {
             />
           </Col>
           <Col sm={12}>
-            <p style={{ color: "white", fontSize: "24px" }}>
-              Beach Background: get a family vacation worth $10,500
+            <p style={{ divor: "white", fontSize: "24px" }}>
+              Beach Background: <br />
+              get a family vacation worth $10,500
             </p>
           </Col>
         </Row>
@@ -90,7 +93,8 @@ function Family() {
           </Col>
           <Col sm={12}>
             <p style={{ color: "white", fontSize: "24px" }}>
-              5 random NFTs: get $1,000 each straight to your wallet
+              5 random NFTs: <br />
+              get $1,000 each straight to your wallet
             </p>
           </Col>
         </Row>
