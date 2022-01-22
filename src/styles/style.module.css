@@ -1,8 +1,16 @@
+@font-face {
+  font-family: "Rammetto";
+  src: url("../../public/assets/font/RammettoOne-Regular.ttf")
+    format("truetype");
+  font-display: swap;
+  font-style: normal;
+}
+
 .section2 {
   display: flex;
   justify-content: center;
   background-image: url("../../public/assets/images/background.png");
-  height: 780px;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -14,15 +22,50 @@
   height: 77%;
   width: 95%;
   padding: 30px;
-  top: 150px;
+  top: 5%;
 }
-
-.tabmenu {
+.btnLoginLayout {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: flex-end;
+  padding: 0.5%;
+  padding-top: 1.5%;
+  padding-right: 1.5%;
 }
-
+.tabmenu {
+  /* display: flex;
+  justify-content: space-evenly;
+  align-items: center; */
+  background-color: rgb(120, 37, 133, 0.25);
+  padding-top: 1.5%;
+  border-radius: 15px;
+  width: 174px;
+  display: flex;
+  flex-direction: column;
+  /* align-content: center; */
+  align-items: center;
+  padding-top: 98%;
+}
+.manuBar {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  padding: 1.5%;
+}
+.btnLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../public/assets/images/tabbtn.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  width: 250px;
+  height: 65px;
+}
+.backDiv {
+  background-image: url("../../public/assets/images/background.svg");
+}
 .tabmenu img {
   width: 225px;
   height: 70px;
@@ -40,10 +83,348 @@
   height: 50px;
   color: white;
   bottom: 0;
+  margin-top: 8%;
+}
+
+.tabBtn1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../public/assets/images/btn.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 244px;
+  height: 63px;
+  color: white;
+  bottom: 10px;
 }
 
 .tabPanel {
   padding: 10px;
   width: 100%;
   height: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  color: white;
+  /* background-image: url("../../public//assets/images/mark.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; */
+}
+
+.menuItem {
+  color: darkgoldenrod !important;
+}
+
+.menuItem:hover {
+  color: cornsilk !important;
+  transition: ease-in-out 0.5s;
+  -webkit-transition: ease-in-out 0.5s;
+  -moz-transition: ease-in-out 0.5s;
+  -ms-transition: ease-in-out 0.5s;
+  -o-transition: ease-in-out 0.5s;
+}
+
+.loadHidden {
+  margin-bottom: 11px;
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0s,
+    transform 0.6s cubic-bezier(0.5, 0, 0, 1) 0s;
+}
+.navUI {
+  list-style-type: none;
+  display: flex;
+  color: #3bb9ff;
+  font-size: 20px;
+  margin-top: 20px;
+  padding-left: 0px;
+}
+.navLabel {
+  text-decoration: none;
+}
+.navLabel:hover {
+  color: #fbaf41;
+  transition-duration: 0.3s;
+}
+.btnConnect {
+  background-color: #fbaf41;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 20px;
+  color: #07081d;
+  cursor: pointer;
+  display: block;
+  height: 40px;
+  size: 20px;
+  line-height: 40px;
+  /* font-size: 14px; */
+  transition-duration: 0.3s;
+  margin-top: 10px;
+}
+
+.backimg {
+  margin: 30px;
+  width: 1200px;
+}
+
+.imgWidth {
+  z-index: -1;
+  width: 340px;
+  border-radius: 5px;
+}
+.penguinImg {
+  margin-top: 30px;
+}
+.penguinImgTag {
+  visibility: visible;
+  margin-left: 75px;
+  margin-top: -8px;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0s,
+    transform 0.6s cubic-bezier(0.5, 0, 0, 1) 0s;
+}
+.showItemDiv {
+  background-image: url("../../public/assets/images/frame2.png");
+  background-size: 100% 100%;
+  height: 152px;
+  width: 100%;
+  padding: 0px 30px;
+}
+.showItemP {
+  color: white;
+  font-size: 20px;
+  padding-top: 43px;
+  padding-left: 60px;
+}
+.showItemInfo {
+  font-size: 27px;
+  padding-left: 22px;
+  border-left: 2px solid #3bb9ff;
+  color: #3bb9ff;
+  line-height: 23px;
+  margin-top: -10px;
+  margin-left: 64px;
+}
+
+.knockouts {
+  color: #3bb9ff;
+  font-size: 60px;
+  font-family: Rammetto;
+  margin-bottom: 0;
+  margin-top: -20px;
+}
+
+.famous {
+  margin-top: 20px;
+  color: white;
+  font-size: 20px;
+}
+
+.border {
+  padding: 0 60px;
+}
+
+.monkey_width {
+  width: 200px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.fair {
+  margin-left: 50px;
+}
+
+.mintCount {
+  background-image: url("../../public/assets/images/frame2.png");
+  background-size: 100% 100%;
+  height: 100px;
+  width: 300px;
+  padding: 35px;
+  margin: 0 auto;
+  color: white;
+  font-family: "Rammetto";
+}
+
+.buy {
+  background-color: yellow;
+  color: black;
+  padding: 20px;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+@media (max-width: 1400px) {
+  .penguinImg {
+    margin-top: 40px;
+  }
+
+  .backimg {
+    width: 1000px;
+  }
+
+  .monkey_width {
+    width: 170px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .backimg {
+    width: 840px;
+  }
+
+  .penguinImg {
+    margin-top: 45px;
+  }
+  .penguinImgTag {
+    margin-left: 20px;
+  }
+
+  .famous {
+    margin-left: 20px;
+  }
+
+  .border {
+    padding: 0 20px;
+  }
+
+  .fair {
+    margin-left: 10px;
+  }
+
+  .monkey_width {
+    width: 160px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 35px;
+  }
+
+  .navUI {
+    display: none;
+  }
+
+  .backimg {
+    width: 600px;
+  }
+
+  .imgWidth {
+    width: 600px;
+  }
+
+  .penguinImg {
+    margin: 0px auto;
+    position: relative;
+  }
+  .penguinImgTag {
+    position: relative;
+    margin-left: 32px;
+  }
+
+  .showItemP {
+    padding-top: 40px;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+  .showItemInfo {
+    padding-left: 22px;
+    margin-top: -10px;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .famous {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 70px;
+  }
+
+  .backimg {
+    width: 400px;
+  }
+
+  .imgWidth {
+    width: 400px;
+  }
+
+  .showItemP {
+    padding-top: 30px;
+    padding-left: 120px;
+    font-size: 30px;
+  }
+  .showItemInfo {
+    padding-left: 22px;
+    margin-top: -10px;
+    margin-left: 120px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  .backimg {
+    width: 250px;
+  }
+
+  .imgWidth {
+    width: 200px;
+    margin-left: 30px;
+  }
+
+  .showItemP {
+    padding-top: 30px;
+    padding-left: 120px;
+    font-size: 30px;
+  }
+  .showItemInfo {
+    padding-left: 22px;
+    margin-top: -10px;
+    margin-left: 120px;
+    font-size: 30px;
+  }
+
+  .knockouts {
+    font-size: 40px;
+  }
+
+  .showItemP {
+    padding-top: 30px;
+    padding-left: 50px;
+    font-size: 30px;
+  }
+  .showItemInfo {
+    padding-left: 22px;
+    margin-top: -10px;
+    margin-left: 50px;
+    font-size: 30px;
+  }
+
+  .monkey_width {
+    width: 250px;
+    padding: 10px;
+  }
 }
