@@ -173,6 +173,7 @@
   /* font-size: 14px; */
   transition-duration: 0.3s;
   margin-top: 10px;
+  font-family: "Rammetto";
 }
 
 .backimg {
@@ -473,6 +474,10 @@
   .monkey_width {
     width: 250px;
     padding: 10px;
+  }
+
+  .team_members {
+    width: 100%;
   }
 
   .family {
