@@ -17,7 +17,7 @@ function MintButton() {
   useEffect(() => {
     const web3 = window.ethereum ? new Web3(window.ethereum) : null
     if (!web3) {
-      alert("non-ethereum browser detected! please install wallet!")
+      alert("Please use desktop or DApp browser if you are not already.")
     } else {
       const contractAddress = "0x82994dff990b80EE01A90A9C2f5aFccc1f5E32F5"
       const contract = new web3.eth.Contract(contractAbi, contractAddress)
@@ -53,7 +53,7 @@ function MintButton() {
   const mintToken = async () => {
     const web3 = window.ethereum ? new Web3(window.ethereum) : null
     if (!web3) {
-      alert("non-ethereum browser detected! please install wallet!")
+      alert("Please use desktop or DApp browser if you are not already.")
     } else {
       const contractAddress = "0x82994dff990b80EE01A90A9C2f5aFccc1f5E32F5"
       const contract = new web3.eth.Contract(contractAbi, contractAddress)
@@ -72,74 +72,51 @@ function MintButton() {
   }
   return (
     <div>
-      <Row style={{ paddingTop: 48, margin: "0 auto" }}>
-        <Col md={4}>
-          <div className={styles.showItemDiv}>
-            <p className={styles.showItemP}>Title</p>
-            <div className={styles.showItemInfo}>TKOs v1</div>
-          </div>
-        </Col>
-        <Col md={4}>
-          <div className={styles.showItemDiv}>
-            <p className={styles.showItemP}>Items</p>
-            <div className={styles.showItemInfo}>{mintCount} / 1000</div>
-          </div>
-        </Col>
-        <Col md={4}>
-          <div className={styles.showItemDiv}>
-            <p className={styles.showItemP}>Price</p>
-            <div className={styles.showItemInfo}>0.25 ETH</div>
-          </div>
-        </Col>
-      </Row>
-      <div className={styles.mintCount}>
-        <span>Quantity: </span>
-        <input
-          type="number"
-          min="1"
-          max="20"
-          style={{
-            backgroundColor: "transparent",
-            color: "#3bb9ff",
-            border: "none",
-          }}
-          value={count}
-          onChange={(e) => setCount(e.target.value)}
-        />
-        <p
-          style={{
-            color: "white",
-            fontSize: "12px",
-            textAlign: "center",
-            fontFamily: "times new roman",
-          }}
-        >
-          Max 20 NFTs per transaction
-        </p>
+      <div className="flex flex-col md:flex-row mt-12 md:space-x-12 md:space-y-0 space-y-12" style={{ display: "flex", backgroundColor: "transparent", paddingBottom: "20px" }}>
+        <div className={styles.showItemDiv}>
+          <p className={styles.showItemP}>LAUNCH</p>
+          <div className={styles.showItemInfo}>1/22/22 @ 12 EST</div>
+        </div>
+        <div className={styles.showItemDiv}>
+          <p className={styles.showItemP}>NFTS</p>
+          <div className={styles.showItemInfo}>{mintCount} / 1000</div>
+        </div>
+        <div className={styles.showItemDiv}>
+          <p className={styles.showItemP}>MINT PRICE</p>
+          <div className={styles.showItemInfo}>0.25 ETH</div>
+        </div>
       </div>
-      <button
-        onClick={() => mintToken()}
-        style={{
-          backgroundColor: "yellow",
-          border: 0,
-          cursor: "pointer",
-          marginLeft: "20px",
-          marginTop: "30px",
-          padding: "0 20px",
-          borderRadius: "10px",
-        }}
-      >
-        <p
+      <div style={{ display: "flex", textAlign: "center", alignItems: "center", justifyContent: "center", paddingTop: "30px" }}>
+        <button
+          className="bg-accent2 text-accent1 hover:bg-accent1 hover:text-accent2 transition duration-150 text-3xl md:text-4xl font-black italic"
+          onClick={() => mintToken()}
           style={{
-            fontFamily: "Rammetto",
-            color: "red",
-            fontSize: "40px",
-            marginTop: "20px",
+            border: "2px #fe6810 solid",
+            cursor: "pointer",
+            padding: "20px",
+            borderRadius: "0",
+            width: "36rem"
           }}
         >
-          MINT YOUR TKO
-        </p>
-      </button>
+          MINT TKO NOW
+        </button>
+      </div>
+
+      <div className={`${styles.mintCount}`}>
+        <div className="mt-2 italic" style={{ fontSize: "16px" }}>
+          MAX 20 PER TX
+        </div>
+        <div className="flex items-center space-x-4 rounded-2xl px-4 py-3">
+          <p className="text-white font-semibold uppercase">Quantity:</p>
+          <input className="w-36 outline-none rounded-2xl bg-accent4 text-white font-bold text-center"
+            type="number"
+            min="1"
+            max="20"
+            value={count}
+            onChange={(e) => setCount(e.target.value)}
+          />
+        </div>
+      </div>
     </div>
   )
 }

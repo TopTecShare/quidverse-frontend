@@ -4,30 +4,20 @@ import { Row, Col } from "reactstrap"
 function Family() {
   return (
     <div>
-      <div style={{ display: "flex" }}>
-        {/* <div>
-          <p className={styles.subtitle1}>PUDGY</p>
-          <p className={styles.subtitle2}>FAMILY</p>
-        </div> */}
-      </div>
 
       <div style={{ color: "white" }}>
         <p
           className={styles.fair}
           style={{
-            color: "yellow",
-            fontFamily: "Rammetto",
-            fontSize: "28px",
+            color: "white",
+            fontSize: "24px",
+            fontWeight: "bold",
+            paddingBottom: "16px",
             marginBottom: "0",
+            marginTop: "18px",
           }}
         >
-          RANDOM PRIZES FOR TKO MINTERS
-        </p>
-        <p
-          className={styles.fair}
-          style={{ fontSize: "24px", fontStyle: "italic" }}
-        >
-          (Get rewarded for being a pioneer)
+          PRIZES: ALL TKO MINTERS ELIGIBLE
         </p>
 
         <div className={styles.border}>
@@ -41,63 +31,49 @@ function Family() {
           </p>
         </div>
       </div>
-      <div className={styles.family}>
-        <Row className={styles.team_members}>
-          <Col sm={12}>
+      <div className={`${styles.family}`}>
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 md:grid-rows-2 grid-rows-4 mt-12 mb-16 mx-auto">
+          <div className="w-72" style={{ flexDirection: "column", justifyContent: "space-evenly", alignItems: "stretch", alignContent: "center" }}>
+            <p className="font-lg font-bold italic text-white">ROLEX TENTACLE PROP:</p>
             <img
-              src="assets/images/ape1.png"
+              src="assets/images/rolex_asset.png"
               className={styles.team_member_pic}
             />
-          </Col>
-          <Col sm={12}>
-            <p style={{ divor: "white", fontSize: "24px" }}>
-              Rolex Tentacle Prop: <br />
-              get a $40,000 customized Rolex
+            <p className={styles.image_description} style={{ color: "white", fontSize: "16px" }}>
+              Win a $40,000 customized Rolex.
             </p>
-          </Col>
-        </Row>
-        <Row className={styles.team_members}>
-          <Col sm={12}>
+          </div>
+          <div className="w-72" style={{ flexDirection: "column", justifyContent: "space-evenly", alignItems: "stretch", alignContent: "center" }}>
+            <p className="font-lg font-bold italic text-white">BEACH BACKGROUND:</p>
             <img
-              src="assets/images/ape2.png"
+              src="assets/images/beach_background.png"
               className={styles.team_member_pic}
             />
-          </Col>
-          <Col sm={12}>
-            <p style={{ divor: "white", fontSize: "24px" }}>
-              Ali vs Liston OG Scene: <br />
-              get signed Muhammad Ali gloves
+            <p className={styles.image_description} style={{ color: "white", fontSize: "16px" }}>
+              Win a family vacation worth $10,500.
             </p>
-          </Col>
-        </Row>
-        <Row className={styles.team_members}>
-          <Col sm={12}>
+          </div>
+          <div className="w-72" style={{ flexDirection: "column", justifyContent: "space-evenly", alignItems: "stretch", alignContent: "center" }}>
+            <p className="font-lg font-bold italic text-white">ALI V LISTON SCENE:</p>
             <img
-              src="assets/images/ape3.png"
+              src="assets/images/ali_gloves.png"
               className={styles.team_member_pic}
             />
-          </Col>
-          <Col sm={12}>
-            <p style={{ divor: "white", fontSize: "24px" }}>
-              Beach Background: <br />
-              get a family vacation worth $10,500
+            <p className={styles.image_description} style={{ color: "white", fontSize: "16px" }}>
+              Win a signed Muhammad Ali glove.
             </p>
-          </Col>
-        </Row>
-        <Row className={styles.team_members}>
-          <Col sm={12}>
+          </div>
+          <div className="w-72" style={{ flexDirection: "column", justifyContent: "space-evenly", alignItems: "stretch", alignContent: "center" }}>
+            <p className="font-lg font-bold italic text-white">15 RANDOM NFTS:</p>
             <img
-              src="assets/images/ape4.png"
+              src="assets/images/TKO_Game.png"
               className={styles.team_member_pic}
             />
-          </Col>
-          <Col sm={12}>
-            <p style={{ color: "white", fontSize: "24px" }}>
-              5 random NFTs: <br />
-              get $1,000 each straight to your wallet
+            <p className={styles.image_description} style={{ color: "white", fontSize: "16px" }}>
+              15 random NFTs win $1,000 each automatically.
             </p>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </div>
     </div>
   )

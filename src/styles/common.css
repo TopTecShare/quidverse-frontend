@@ -3,4 +3,5 @@ body,
 #root {
   height: 100vh !important;
   background-color: #07081d;
+  font-family: "MONTSERRAT", sans-serif;
 }

@@ -20,12 +20,12 @@ export default class MyDocument extends Document {
             })(window,document,'script','dataLayer','GTM-TL56QJD');`,
             }}
           ></script>
-          <link
+          {/* <link
             rel="stylesheet"
             href="/public/assets/font/RammettoOne-Regular.ttf"
             as="font"
             crossOrigin=""
-          />
+          /> */}
           <link
             href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
             rel="stylesheet"
