@@ -162,12 +162,12 @@ div>.btnConnect {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 0 20px;
+  padding: 6px 18px;
   cursor: pointer;
   display: block;
-  height: 40px;
-  size: 20px;
-  line-height: 20px;
+  /* height: 40px; */
+  /* size: 20px; */
+  /* line-height: 20px; */
   transition-duration: 0.3s;
   /* margin-top: 10px; */
   border: none;

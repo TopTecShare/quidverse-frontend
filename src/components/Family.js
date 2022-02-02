@@ -25,7 +25,7 @@ function Family() {
             Three prizes will depend on what you mint. The more you mint the
             higher your chance will be to get those prestige prizes. Those are
             ultra rare because they only appear once in the entire collection
-            (i.e. the Rolex attribute). Five cash prizes for a random NFT-- you
+            (i.e. the Rolex attribute). 15 cash prizes for a random NFT-- you
             can win more than one cash prize. The more you mint the more you can
             win.
           </p>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import Web3 from "web3"
 import contractAbi from "../abi/contractABI.json"
 import { Row, Col, Container } from "reactstrap"
 
@@ -10,28 +9,19 @@ import styles from "../styles/style.module.css"
 // import { makeStyles } from "@material-ui/core/styles"
 // import { StylesContext } from "@material-ui/styles"
 
-function MintButton() {
+function MintButton({ web3 }) {
   const [count, setCount] = useState(1)
   const [mintCount, setMintCount] = useState(0)
 
   useEffect(() => {
-    const web3 = window.ethereum ? new Web3(window.ethereum) : null
     if (!web3) {
       alert("Please use desktop or DApp browser if you are not already.")
     } else {
       const contractAddress = "0x82994dff990b80EE01A90A9C2f5aFccc1f5E32F5"
       const contract = new web3.eth.Contract(contractAbi, contractAddress)
 
-      window.ethereum.on("chainChanged", (chainId) => {
-        if (Number(chainId) !== 1) {
-          alert("Please switch to Ethereum mainnet in your wallet")
-        } else window.location.reload()
-      })
-
       if (!!contract) {
-        contract.methods
-          .totalSupply()
-          .call()
+        contract.methods.totalSupply().call()
           .then((res) => {
             setMintCount(res)
           })
@@ -39,8 +29,7 @@ function MintButton() {
             console.log(err)
           })
 
-        contract.events
-          .CreateTentacleKnockout()
+        contract.events.CreateTentacleKnockout()
           .on("data", (event) => {
             setMintCount(Number(mintCount) + 1)
           })
@@ -49,9 +38,9 @@ function MintButton() {
           })
       }
     }
-  }, [])
+  }, [web3])
+
   const mintToken = async () => {
-    const web3 = window.ethereum ? new Web3(window.ethereum) : null
     if (!web3) {
       alert("Please use desktop or DApp browser if you are not already.")
     } else {
@@ -70,6 +59,7 @@ function MintButton() {
       }
     }
   }
+
   return (
     <div>
       <div className="flex flex-col md:flex-row mt-12 md:space-x-12 md:space-y-0 space-y-12" style={{ display: "flex", backgroundColor: "transparent", paddingBottom: "20px" }}>

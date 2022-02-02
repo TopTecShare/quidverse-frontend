@@ -1,9 +1,6 @@
 import React, { useEffect } from "react"
 
 // Components
-import Header from "../components/Header"
-import Carrousel from "../components/Carrousel"
-import Footer from "../components/Footer"
 import { Col, Container, Row } from "reactstrap"
 import Head from "next/head"
 
@@ -37,14 +34,12 @@ export default function Success() {
       <Head>
         <title>LedLamp Liquidators - Success</title>
       </Head>
-      <Header />
-      <Carrousel />
       <div className="success-page">
         <Container>
           <Row>
             <Col md={5}>
               <h1>Success Order</h1>
-              <img src={lamp} width="100%" />
+              {/* <img src={lamp} width="100%" /> */}
             </Col>
             <Col md={2} />
             <Col md={5}>
@@ -64,7 +59,6 @@ export default function Success() {
           </Row>
         </Container>
       </div>
-      <Footer />
     </>
   )
 }
